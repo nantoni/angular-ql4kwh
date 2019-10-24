@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { Client } from './models/client';
-import { environment } from '../environments/environment';
+import { environment } from './environments/environment';
 
 
 @Injectable()
-export class ApiService {
+export class ProduitService {
 
   constructor(private http:HttpClient) { }
     public getClients () : Observable<Client[]> {
-        return this.http.get<Client[]>(environment.backendClient);
+        return this.http.get<Client[]>(environment.backendProduit);
     }
 }
