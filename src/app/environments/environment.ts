@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  backendProduit : '/assets/client.json'
+  backendProduit : '/assets/produits.json'
 };

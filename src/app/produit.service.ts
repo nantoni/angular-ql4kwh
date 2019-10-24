@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 import { Observable } from 'rxjs';
-import { Client } from './models/produit';
+import { Produit } from './models/produit';
 import { environment } from './environments/environment';
 
 
@@ -11,7 +11,7 @@ import { environment } from './environments/environment';
 export class ProduitService {
 
   constructor(private http:HttpClient) { }
-    public getProduits () : Observable<Client[]> {
-        return this.http.get<Client[]>(environment.backendProduit);
+    public getProduits () : Observable<Produit[]> {
+        return this.http.get<Produit[]>(environment.backendProduit);
     }
 }
