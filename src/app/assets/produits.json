@@ -1,5 +1,3 @@
 [
-  {"nom":"jean","tel":"123456789"},
-  {"nom":"jacques","tel":"123006789"},
-  {"nom":"marcel","tel":"123006744"}
+  {"nom":"pomme","prix":"123456789","image":"./pictures/pomme.png"}
 ]
