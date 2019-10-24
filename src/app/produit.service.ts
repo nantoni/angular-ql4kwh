@@ -11,7 +11,7 @@ import { environment } from './environments/environment';
 export class ProduitService {
 
   constructor(private http:HttpClient) { }
-    public getClients () : Observable<Client[]> {
+    public getProduits () : Observable<Client[]> {
         return this.http.get<Client[]>(environment.backendProduit);
     }
 }

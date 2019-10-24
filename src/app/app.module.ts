@@ -9,7 +9,7 @@ import { ProduitService } from './produit.service';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ProduitService ]
