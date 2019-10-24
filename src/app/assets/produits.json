@@ -1,3 +1,10 @@
 [
-  {"nom":"pomme","prix":"123456789","image":"./pictures/apple.jpg"}
+  {"nom":"apple","prix":"0.80","image":"./pictures/apple.jpg"},
+  {"nom":"grapes","prix":"1.24","image":"./pictures/grapes.jpeg"},
+  {"nom":"kiwi","prix":"0.75","image":"./pictures/kiwi.jpeg"},
+  {"nom":"lime","prix":"0.58","image":"./pictures/lime.jpeg"},
+  {"nom":"orange","prix":"1.79","image":"./pictures/orange.jpg"},
+  {"nom":"pomelo","prix":"2.29","image":"./pictures/pomelo.jpg"},
+  {"nom":"watermelon","prix":"3.89","image":"./pictures/watermelon.png"}
+
 ]
