@@ -1,4 +1,5 @@
 export class Produit {
     nom : string;
-    tel : string;
+    prix : number;
+    image : string;
 }
