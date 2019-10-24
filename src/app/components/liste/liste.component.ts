@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ProduitService } from '../../produit.service';
+import { Produit } from '..//models/produit';
+
 
 @Component({
   selector: 'app-liste',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeComponent implements OnInit {
 
-  constructor() { }
+  produits : Observable<Produit[]>
+
+  constructor(private produitService : ProduitService) { }
 
   ngOnInit() {
+    this.produits = this.produitService.getProduits ();
   }
 
 }
