@@ -1,1 +1,5 @@
-<p *ngFor="let item of produits | async">{{ item.nom }}</p> 
+
+<div *ngFor="let item of produits | async">
+<p>{{item.nom}} - {{item.prix}}</p>
+<img src="{{item.image}}">
+</div>
