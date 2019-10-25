@@ -1,5 +1,8 @@
-
-<div *ngFor="let item of produits | async">
-<p>{{item.nom}} - {{item.prix}}</p>
-<img src="//{{item.image}}">
+<div class="row">
+  <div class="col-4" *ngFor="let item of produits | async">
+    <div class="card">
+      <img src="{{item.image}}">
+      <div class="card-body">{{item.nom}} - {{item.prix}}€></div>
+    </div>
+  </div>
 </div>
