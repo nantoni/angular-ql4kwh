@@ -9,7 +9,6 @@ import { ProduitService } from './produit.service';
 import { ListeComponent } from './components/liste/liste.component';
 import { MoteurComponent } from './components/moteur/moteur.component';
 
-
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent ],
