@@ -1,9 +1,9 @@
 [
-  {"nom":"apple","prix":"0.80","image":"https://i5.walmartimages.com/asr/51f8fd84-f201-42c1-9151-cdc014f75d0b_1.1073a8a8360a21bd2ab83e50e3cec3dc.jpeg?odnWidth=200&odnHeight=200&odnBg=ffffff"},
-  {"nom":"grapes","prix":"1.24","image":"grapes.jpeg"},
-  {"nom":"kiwi","prix":"0.75","image":"kiwi.jpeg"},
-  {"nom":"lime","prix":"0.58","image":"lime.jpeg"},
-  {"nom":"orange","prix":"1.79","image":"orange.jpg"},
-  {"nom":"pomelo","prix":"2.29","image":"pomelo.jpg"},
-  {"nom":"watermelon","prix":"3.89","image":"watermelon.png"}
+  {"nom":"Gourde metal 3L","prix":"18.80","image":"https://i5.walmartimages.com/asr/51f8fd84-f201-42c1-9151-cdc014f75d0b_1.1073a8a8360a21bd2ab83e50e3cec3dc.jpeg?odnWidth=200&odnHeight=200&odnBg=ffffff"},
+  {"nom":"Gourde plastique 2L","prix":"12.20","image":"grapes.jpeg"},
+  {"nom":"Gourde plastique 1,5L","prix":"8.90","image":"kiwi.jpeg"},
+  {"nom":"Gourde metal 1,5L","prix":"15.60","image":"lime.jpeg"},
+  {"nom":"Mug metal 0,75L","prix":"13.30","image":"orange.jpg"},
+  {"nom":"Mug metal 0,5L","prix":"11.90","image":"pomelo.jpg"},
+  {"nom":"Gourde metal 0,75L","prix":"12.90","image":"watermelon.png"}
 ]
