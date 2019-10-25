@@ -1,8 +1,8 @@
     <div class="m-3">
-        <select class="selectpicker" data-style="btn-primary" [(ngModel)]="type" (change)="notifyParent()">
-            <option value="Pays">Pays</option>
-            <option value="Type">Type (Villa...)</option>
-            <option value="PrixInf">Prix inférieur</option>
-            <option value="PrixSup">Prix supérieur</option>
+        <select class="selectpicker" [(ngModel)]="option" (change)="notify()">
+            <option value="priceAsc">Prix croissant</option>
+            <option value="priceDesc">Prix décroissant</option>
+            <option value="sizeAsc">Taille croissante</option>
+            <option value="sizeDesc">Taille décroissante</option>
         </select>
     </div>
