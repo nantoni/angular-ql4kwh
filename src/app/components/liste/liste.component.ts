@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProduitService } from '../../produit.service';
 import { Produit } from './../../models/produit';
@@ -12,7 +12,9 @@ import { Produit } from './../../models/produit';
 export class ListeComponent implements OnInit {
 
   produits : Produit[] = [];
-  filter : string = "";
+
+  @Input() filter: string;
+
 
   constructor(private produitService : ProduitService) { }
 

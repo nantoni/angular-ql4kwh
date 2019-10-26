@@ -1,3 +1,3 @@
 <h1 class="m-3">La bonne gourde</h1>
-<app-moteur></app-moteur>
-<app-liste></app-liste>
+<app-moteur (change)="changeFilter($event)"></app-moteur>
+<app-liste [filter]="filter"></app-liste>
