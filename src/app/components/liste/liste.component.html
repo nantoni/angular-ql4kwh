@@ -2,8 +2,9 @@
   <div class="col-4" *ngFor="let item of produits | produit:filter">
     <div class="card m-3">
       <img class="p-3" src="{{item.image}}">
-      <div class="card-body">{{item.nom}} {{item.taille}}L</div>
-        <div class="card-footer">{{item.prix}}€</div>
+      <div class="card-body">{{item.nom}}</div>
+        <div class="card-footer bg-secondary text-white">{{item.taille}}L</div>
+        <div class="card-footer bg-warning">{{item.prix}}€</div>
     </div>
   </div>
 </div>
