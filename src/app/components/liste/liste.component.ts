@@ -12,6 +12,7 @@ import { Produit } from './../../models/produit';
 export class ListeComponent implements OnInit {
 
   produits : Produit[] = [];
+  filter : string = "";
 
   constructor(private produitService : ProduitService) { }
 
