@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   name = "Angular";
-  filter : string = "BBBB";
+  filter : string = "";
 
   onChangeFilter(newFilter: string) {
     this.filter = newFilter;
