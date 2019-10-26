@@ -10,7 +10,7 @@ export class ProduitPipe implements PipeTransform {
     switch (filtre) {
       case "priceAsc": {
         return produits.sort((a, b) => {
-          return a.prix < b.prix ? -1 : a.prix > b.prix ? 1 : 0;
+          return parseFloat(a.prix) < parseFloat(b.prix) ? -1 : parseFloat(a.prix) > parseFloat(b.prix) ? 1 : 0;
         });
         break;
       }
