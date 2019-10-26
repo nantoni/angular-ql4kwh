@@ -11,12 +11,12 @@ import { Produit } from './../../models/produit';
 })
 export class ListeComponent implements OnInit {
 
-  produits : Observable<Produit[]>
+  produits : Produit[] = [];
 
   constructor(private produitService : ProduitService) { }
 
   ngOnInit() {
-    this.produits = this.produitService.getProduits ();
+        this.produitService.getProduits().subscribe(val => this.produits = val);
   }
 
 }

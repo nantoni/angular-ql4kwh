@@ -6,6 +6,8 @@ import { Produit } from "./models/produit";
 })
 export class ProduitPipe implements PipeTransform {
   transform(produits: Produit[], filtre: string): any {
+    console.log(produits);
+    if(produits.constructor === Array){
     switch (filtre) {
       case "priceAsc": {
         return produits.filter(produit => produit.prix < Number.MAX_SAFE_INTEGER)
@@ -21,8 +23,10 @@ export class ProduitPipe implements PipeTransform {
         break;
       }
       default: {
+        return produits;
         break;
       }
+    }
     }
   }
 }
