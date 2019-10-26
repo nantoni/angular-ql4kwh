@@ -16,19 +16,19 @@ export class ProduitPipe implements PipeTransform {
       }
       case "priceDesc": {
         return produits.sort((a, b) => {
-          return a.prix > b.prix ? -1 : a.prix < b.prix ? 1 : 0;
+          return parseFloat(a.prix) > parseFloat(b.prix) ? -1 : parseFloat(a.prix) < parseFloat(b.prix) ? 1 : 0;
         });
         break;
       }
       case "sizeAsc": {
         return produits.sort((a, b) => {
-          return a.taille < b.taille ? -1 : a.taille > b.taille ? 1 : 0;
+          return parseFloat(a.taille) < parseFloat(b.taille) ? -1 : parseFloat(a.taille) > parseFloat(b.taille) ? 1 : 0;
         });
         break;
       }
       case "sizeDesc": {
         return produits.sort((a, b) => {
-          return a.taille > b.taille ? -1 : a.taille < b.taille ? 1 : 0;
+          return parseFloat(a.taille) > parseFloat(b.taille) ? -1 : parseFloat(a.taille) < parseFloat(b.taille) ? 1 : 0;
         });
         break;
       }
