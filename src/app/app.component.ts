@@ -7,9 +7,10 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   name = "Angular";
+  filter : string = "BBBB";
 
-  onFormValidated(data: FormGroup) {
-    this.data = data;
-    this.formValidated = true;
+  onChangeFilter(newFilter: string) {
+    this.filter = newFilter;
+
   }
 }

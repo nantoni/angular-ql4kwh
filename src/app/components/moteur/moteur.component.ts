@@ -11,7 +11,7 @@ export class MoteurComponent implements OnInit {
 
   @Output() changeFilter: EventEmitter<string> = new EventEmitter<string>(); 
 
-  filter : string = "";
+  filter : string = "AAA";
 
   ngOnInit() {
   }
