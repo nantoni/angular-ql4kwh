@@ -6,27 +6,36 @@ import { Produit } from "./models/produit";
 })
 export class ProduitPipe implements PipeTransform {
   transform(produits: Produit[], filtre: string): any {
-    console.log(produits);
-    if(produits.constructor === Array){
+    console.log(filtre);
     switch (filtre) {
       case "priceAsc": {
-        return produits.filter(produit => produit.prix < Number.MAX_SAFE_INTEGER)
+        return produits.sort((a, b) => {
+          return a.prix < b.prix ? -1 : a.prix > b.prix ? 1 : 0;
+        });
         break;
       }
       case "priceDesc": {
+        return produits.sort((a, b) => {
+          return a.prix > b.prix ? -1 : a.prix < b.prix ? 1 : 0;
+        });
         break;
       }
       case "sizeAsc": {
+        return produits.sort((a, b) => {
+          return a.taille < b.taille ? -1 : a.taille > b.taille ? 1 : 0;
+        });
         break;
       }
       case "sizeDesc": {
+        return produits.sort((a, b) => {
+          return a.taille > b.taille ? -1 : a.taille < b.taille ? 1 : 0;
+        });
         break;
       }
       default: {
         return produits;
         break;
       }
-    }
     }
   }
 }

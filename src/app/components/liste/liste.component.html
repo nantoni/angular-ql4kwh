@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-4" *ngFor="let item of produits | produit:'priceAsc'">
+  <div class="col-4" *ngFor="let item of produits | produit:'sizeDesc'">
     <div class="card m-3">
       <img class="p-3" src="{{item.image}}">
       <div class="card-body">{{item.nom}} {{item.taille}}L</div>
