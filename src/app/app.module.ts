@@ -8,10 +8,11 @@ import { HelloComponent } from './hello.component';
 import { ProduitService } from './produit.service';
 import { ListeComponent } from './components/liste/liste.component';
 import { MoteurComponent } from './components/moteur/moteur.component';
+import { ProduitPipe } from './produit.pipe';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent ],
+  declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent, ProduitPipe ],
   bootstrap:    [ AppComponent ],
   providers:    [ ProduitService ]
 })
