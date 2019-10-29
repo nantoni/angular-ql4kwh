@@ -14,9 +14,11 @@ import { CompteComponent } from './components/compte/compte.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PanierComponent } from './components/panier/panier.component';
+import { NgxsModule } from '@ngxs/store';
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, NgxsModule.forRoot () ],
   declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent, ProduitPipe, AccueilComponent, CompteComponent, DetailComponent, HeaderComponent, PanierComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ProduitService ]
