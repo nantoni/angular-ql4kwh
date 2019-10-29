@@ -9,10 +9,15 @@ import { ProduitService } from './produit.service';
 import { ListeComponent } from './components/liste/liste.component';
 import { MoteurComponent } from './components/moteur/moteur.component';
 import { ProduitPipe } from './produit.pipe';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { CompteComponent } from './components/compte/compte.component';
+import { DetailComponent } from './components/detail/detail.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PanierComponent } from './components/panier/panier.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent, ProduitPipe ],
+  declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent, ProduitPipe, AccueilComponent, CompteComponent, DetailComponent, HeaderComponent, PanierComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ProduitService ]
 })
