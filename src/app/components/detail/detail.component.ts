@@ -13,7 +13,7 @@ import {ActivatedRoute } from '@angular/router';
   styleUrls: ["./detail.component.css"]
 })
 export class DetailComponent implements OnInit {
-  item: Produit;
+  item: N;
 
   constructor(private store: Store, private route: ActivatedRoute) {}
 

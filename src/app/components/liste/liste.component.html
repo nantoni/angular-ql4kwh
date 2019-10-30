@@ -6,7 +6,7 @@
         <div (click)='log(item);' class="card-footer bg-secondary text-white">{{item.taille}}L</div>
         <div (click)='log(item);' class="card-footer bg-warning">{{item.prix}}€</div>
         <div (click)='onProduitClick(item)' class="card-footer bg-primary clickable">Ajouter au panier</div>
-        <a [routerLink] = "['/detail']" > CLICKME </a>
+        <a [routerLink] = "['/detail', item.prix]" > CLICKME </a>
     </div>
   </div>
 </div>
