@@ -3,6 +3,9 @@ import { Observable } from 'rxjs';
 import { ProduitService } from '../../produit.service';
 import { Produit } from './../../models/produit';
 
+import { Store } from '@ngxs/store';
+import { PanierState } from '../../../../shared/states/panier-state';
+import { AddProduit } from '../../../../shared/actions/addProduit-action';
 
 @Component({
   selector: 'app-liste',
@@ -16,12 +19,22 @@ export class ListeComponent implements OnInit {
   @Input() filter: string;
 
 
-  constructor(private produitService : ProduitService) { }
+  constructor(private produitService : ProduitService, private store : Store) { }
 
   ngOnInit() {
         this.produitService.getProduits().subscribe(val => this.produits = val);
   }
 
   log(val) { console.log(val); }
+
+  addProduit(produit: Produit){
+    this.store.dispatch(new AddProduit({
+      produit
+    }));
+  }
+
+  onProduitClick(produit: Produit){
+    this.addProduit(produit);
+  }
 
 }

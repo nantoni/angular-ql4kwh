@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-4" *ngFor="let item of produits | produit:filter">
-    <div (click)='.log(item)' class="card m-3">
+    <div (click)='log(item); onProduitClick(item)' class="card m-3">
       <img class="p-3" src="{{item.image}}">
       <div class="card-body">{{item.nom}}</div>
         <div class="card-footer bg-secondary text-white">{{item.taille}}L</div>
