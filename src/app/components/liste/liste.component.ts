@@ -41,5 +41,6 @@ export class ListeComponent implements OnInit {
 
   onProduitClick(produit: Produit) {
     this.addProduit(produit);
+    this.log(produit);
   }
 }

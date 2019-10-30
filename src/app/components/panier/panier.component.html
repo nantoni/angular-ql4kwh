@@ -1,6 +1,7 @@
  <ul class="list-group">
-  <li *ngFor="let item of produits" class="list-group-item d-flex justify-content-between align-items-center">
-    {{item.nom}}
-    <span class="badge badge-primary badge-pill">12</span>
+  <li (click)="log(item)" *ngFor="let item of produits" class="list-group-item d-flex justify-content-between align-items-center">
+    {{item.produit.nom}} - {{item.produit.taille}}L
+    <span class="badge badge-primary badge-pill">{{item.produit.prix}}€</span>
+    <button type="button" class="btn btn-danger">Supprimer</button>
   </li>
 </ul> 

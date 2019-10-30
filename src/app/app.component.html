@@ -1,8 +1,9 @@
 <app-header></app-header>
+<app-panier></app-panier>
+
 <div class="row">
 <div class="col-lg-8 offset-lg-2 col-10 offset-1">
   <app-moteur (changeFilter)="onChangeFilter($event)"></app-moteur>
   <app-liste [filter]="filter"></app-liste>
 </div>
 </div>
-<app-panier></app-panier>

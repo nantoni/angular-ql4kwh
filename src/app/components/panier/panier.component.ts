@@ -10,7 +10,7 @@ import { Produit } from "../../../../shared/models/produit";
 })
 export class PanierComponent implements OnInit {
 
-  produits: Produit[];
+  produits: Produit[] = [];
 
   constructor(private store: Store) {}
 
@@ -18,6 +18,10 @@ export class PanierComponent implements OnInit {
     this.store
       .select(state => state.panier.panier)
       .subscribe(val => this.produits = val);
+  }
+
+  log(val) {
+    console.log(val);
   }
 
 }
