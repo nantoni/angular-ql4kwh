@@ -40,8 +40,6 @@ const appRoutes: Routes = [
     loadChildren: () =>
       import("./components/panier/panier.module").then(m => m.PanierModule)
   },
-  { path: "", redirectTo: "/accueil", pathMatch: "full" },
-  { path: "**", redirectTo: "/accueil", pathMatch: "full" }
 ];
 
 @NgModule({

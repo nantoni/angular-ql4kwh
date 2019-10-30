@@ -3,10 +3,15 @@ import { CommonModule } from "@angular/common";
 import { ListeComponent } from "./liste.component";
 import { ProduitPipe } from "../../produit.pipe";
 import { ProduitService } from "../../produit.service";
+import { RouterModule, Routes } from '@angular/router';
+
+
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule,
   declarations: [ListeComponent, ProduitPipe],
-  providers: [ProduitService]
+  providers: [ProduitService],
+  exports: [RouterModule]
 })
 export class ListeModule {}
+
