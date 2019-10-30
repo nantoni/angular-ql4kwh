@@ -1,10 +1,11 @@
 <div class="row">
   <div class="col-4" *ngFor="let item of produits | produit:filter">
-    <div (click)='log(item); onProduitClick(item)' class="card m-3">
-      <img class="p-3" src="{{item.image}}">
-      <div class="card-body">{{item.nom}}</div>
-        <div class="card-footer bg-secondary text-white">{{item.taille}}L</div>
-        <div class="card-footer bg-warning">{{item.prix}}€</div>
+    <div class="card m-3 clickable">
+      <img (click)='log(item);' class="p-3" src="{{item.image}}">
+      <div (click)='log(item);' class="card-body">{{item.nom}}</div>
+        <div (click)='log(item);' class="card-footer bg-secondary text-white">{{item.taille}}L</div>
+        <div (click)='log(item);' class="card-footer bg-warning">{{item.prix}}€</div>
+        <div (click)='onProduitClick(item)' class="card-footer bg-primary button">Ajouter au panier</div>
     </div>
   </div>
 </div>
