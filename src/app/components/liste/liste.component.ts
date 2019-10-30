@@ -6,6 +6,8 @@ import { Produit } from "./../../models/produit";
 import { Store } from "@ngxs/store";
 import { PanierState } from "../../../../shared/states/panier-state";
 import { AddProduit } from "../../../../shared/actions/addProduit-action";
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: "app-liste",
@@ -17,7 +19,7 @@ export class ListeComponent implements OnInit {
 
   @Input() filter: string;
 
-  constructor(private store: Store, private produitService: ProduitService) {}
+  constructor(private store: Store, private produitService: ProduitService, private router: Router) {}
 
   ngOnInit() {
     this.produitService.getProduits().subscribe(val => (this.produits = val));
@@ -40,7 +42,7 @@ export class ListeComponent implements OnInit {
   }
 
   onProduitClick(produit: Produit) {
-    this.addProduit(produit);
+    this.router.navigate(['detail']);
     this.log(produit);
   }
 }

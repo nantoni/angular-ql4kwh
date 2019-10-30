@@ -16,11 +16,27 @@ import { HeaderComponent } from './components/header/header.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { NgxsModule } from '@ngxs/store';
 import { PanierState } from '../../shared/states/panier-state';
+import { RouterModule, Routes } from '@angular/router';
 
+//const appRoutes: Routes = [
+//{ path: 'detail/:produit', component: DetailComponent },
+//];
 
+const appRoutes: Routes = [
+    {
+    path: 'liste',
+    component: ListeComponent,
+      children : [
+        {
+        path: 'detail/:produit',
+        component: DetailComponent,
+        }
+      ]
+    }
+  ];
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, NgxsModule.forRoot ([PanierState]) ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, NgxsModule.forRoot ([PanierState]),RouterModule.forRoot(appRoutes) ],
   declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent, ProduitPipe, AccueilComponent, CompteComponent, DetailComponent, HeaderComponent, PanierComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ProduitService ]
