@@ -15,10 +15,12 @@ import { DetailComponent } from './components/detail/detail.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { NgxsModule } from '@ngxs/store';
+import { PanierState } from '../../shared/states/panier-state';
+
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, NgxsModule.forRoot () ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, NgxsModule.forRoot ([PanierState]) ],
   declarations: [ AppComponent, HelloComponent, ListeComponent, MoteurComponent, ProduitPipe, AccueilComponent, CompteComponent, DetailComponent, HeaderComponent, PanierComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ProduitService ]
