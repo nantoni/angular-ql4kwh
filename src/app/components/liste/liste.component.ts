@@ -22,4 +22,6 @@ export class ListeComponent implements OnInit {
         this.produitService.getProduits().subscribe(val => this.produits = val);
   }
 
+  log(val) { console.log(val); }
+
 }
