@@ -24,6 +24,10 @@ import { RouterModule, Routes } from "@angular/router";
 
 const appRoutes: Routes = [
   {
+    path: "accueil",
+    component: AccueilComponent
+  },
+  {
     path: "detail/:id",
     component: DetailComponent
   },
@@ -36,8 +40,11 @@ const appRoutes: Routes = [
         component: DetailComponent
       }
     ]
-  }
+  },
+  { path: "", redirectTo: "/accueil", pathMatch: "full" },
+  { path: "**", redirectTo: "/accueil", pathMatch: "full" },
 ];
+
 
 @NgModule({
   imports: [
