@@ -17,10 +17,14 @@ export class ListeComponent implements OnInit {
 
   @Input() filter: string;
 
-  constructor(private store: Store,private produitService: ProduitService) {}
+  constructor(private store: Store, private produitService: ProduitService) {}
 
   ngOnInit() {
     this.produitService.getProduits().subscribe(val => (this.produits = val));
+
+    this.store
+      .select(state => state.panier.panier)
+      .subscribe(val => this.log(val.length));
   }
 
   log(val) {
@@ -37,9 +41,5 @@ export class ListeComponent implements OnInit {
 
   onProduitClick(produit: Produit) {
     this.addProduit(produit);
-
-    this.store
-      .select(state => state.panier.)
-      .subscribe(val => this.log(val.length));
   }
 }
