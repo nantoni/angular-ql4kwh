@@ -1,7 +1,6 @@
 <app-header></app-header>
 <div class="row">
 <div class="col-lg-8 offset-lg-3">
-  <h1 class="m-3">La bonne gourde</h1>
   <app-moteur (changeFilter)="onChangeFilter($event)"></app-moteur>
   <app-liste [filter]="filter"></app-liste>
 </div>
