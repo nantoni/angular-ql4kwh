@@ -4,8 +4,7 @@ import { Produit } from "./../../models/produit";
 import { Store } from "@ngxs/store";
 import { PanierState } from "../../../../shared/states/panier-state";
 import { AddProduit } from "../../../../shared/actions/addProduit-action";
-import {ActivatedRoute } from '@angular/router';
-
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-detail",
@@ -22,15 +21,10 @@ export class DetailComponent implements OnInit {
   }
 
   addProduit(produit: Produit) {
-    this.store.dispatch(
-      new AddProduit({
-        produit
-      })
-    );
+    this.store.dispatch(new AddProduit(produit));
   }
 
   onProduitClick(produit: Produit) {
     this.addProduit(produit);
   }
-
 }

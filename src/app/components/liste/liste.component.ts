@@ -44,7 +44,7 @@ export class ListeComponent implements OnInit {
     this.log(produit);
   }
 
-  detail(){
-    this.router.navigate(['detail']);
+  detail(id : number){
+    this.router.navigate(['detail', id]);
   }
 }
