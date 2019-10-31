@@ -17,11 +17,11 @@ const routes: Routes = [
   },
   {
     path: 'panier',
-    loadChildren: './components/panier/panier.module#PModule'
+    loadChildren: './components/panier/panier.module#PanierModule'
   },
   {
     path: '',
-    redirectTo: '',
+    redirectTo: '/accueil',
     pathMatch: 'full'
   }
 ];
