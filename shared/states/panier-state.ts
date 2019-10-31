@@ -37,7 +37,8 @@ export class PanierState {
     const state = getState();
 
     patchState({
-      panier: [...state.panier.slice(0, -1)]
+      panier: [...state.panier.slice(0, payload),
+                ...state.panier.slice(index + 1)]
     });
   }
 

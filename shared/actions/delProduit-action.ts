@@ -1,7 +1,7 @@
 import { Produit } from '../models/produit'
 
 export class DelProduit {
-    static readonly type = '[Produit] Del';
+    static readonly type = '[Number] Del';
     
-    constructor(public payload: Produit) {}
+    constructor(public payload: Number) {}
 }

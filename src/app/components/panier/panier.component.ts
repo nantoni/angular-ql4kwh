@@ -24,14 +24,13 @@ export class PanierComponent implements OnInit {
     console.log(val);
   }
 
-  delProduit(produit: Produit) {
+  delProduit(index: Number) {
     this.store.dispatch(
-      new DelProduit(produit)
+      new DelProduit(index)
     );
   }
 
-  onProduitRemoveClick(produit: Produit) {
-    this.delProduit(produit);
-    this.log(produit);
+  onProduitRemoveClick(index: Number) {
+    this.delProduit(index);
   }
 }
