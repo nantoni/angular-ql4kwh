@@ -18,11 +18,6 @@ const routes: Routes = [
   {
     path: 'panier',
     loadChildren: './components/panier/panier.module#PanierModule'
-  },
-  {
-    path: '',
-    redirectTo: '/accueil',
-    pathMatch: 'full'
   }
 ];
 

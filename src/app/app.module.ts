@@ -19,8 +19,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
   {
-    path: "accueil",
+    path: "",
     component: AccueilComponent
+  },
+  {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
   }
 ];
 

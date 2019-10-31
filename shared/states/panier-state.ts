@@ -38,7 +38,7 @@ export class PanierState {
 
     patchState({
       panier: [...state.panier.slice(0, payload),
-                ...state.panier.slice(index + 1)]
+                ...state.panier.slice(payload + 1)]
     });
   }
 
