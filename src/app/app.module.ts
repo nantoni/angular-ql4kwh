@@ -26,7 +26,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,

@@ -12,6 +12,14 @@ const routes: Routes = [
     loadChildren: './components/liste/liste.module#ListeModule'
   },
   {
+    path: 'detail',
+    loadChildren: './components/detail/detail.module#DetailModule'
+  },
+  {
+    path: 'panier',
+    loadChildren: './components/panier/panier.module#PModule'
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
