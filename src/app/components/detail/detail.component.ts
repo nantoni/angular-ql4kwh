@@ -12,12 +12,13 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./detail.component.css"]
 })
 export class DetailComponent implements OnInit {
-  item: N;
+  itemId: number = 0;
+  current: Produit;
 
   constructor(private store: Store, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.item = this.route.snapshot.params.id;
+    this.itemId = this.route.snapshot.params.id;
   }
 
   addProduit(produit: Produit) {
