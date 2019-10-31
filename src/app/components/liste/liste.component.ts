@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Observable } from "rxjs";
 import { ProduitService } from "../../produit.service";
-import { Produit } from "./../../models/produit";
+import { Produit } from "../../../../shared/models/produit";
 
 import { Store } from "@ngxs/store";
 import { PanierState } from "../../../../shared/states/panier-state";
@@ -35,14 +35,16 @@ export class ListeComponent implements OnInit {
 
   addProduit(produit: Produit) {
     this.store.dispatch(
-      new AddProduit({
-        produit
-      })
+      new AddProduit(produit)
     );
   }
 
-  onProduitClick(produit: Produit) {
-    this.router.navigate(['detail']);
+  onProduitAddClick(produit: Produit) {
+    this.addProduit(produit);
     this.log(produit);
+  }
+
+  detail(){
+    this.router.navigate(['detail']);
   }
 }
