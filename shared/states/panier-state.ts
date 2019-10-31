@@ -2,7 +2,7 @@ import { NgxsModule, Action, Selector, State, StateContext } from "@ngxs/store";
 import { PanierStateModel } from "./panier-state-model";
 import { AddProduit } from "../actions/addProduit-action";
 import { DelProduit } from "../actions/delProduit-action";
-import { SetCurrentProduit } from "../actions/setProduit-action";
+import { SetCurrentProduit } from "../actions/setCurrentProduit-action";
 import { Produit } from "../models/produit";
 
 @State<PanierStateModel>({
@@ -46,6 +46,6 @@ export class PanierState {
     { getState, patchState }: StateContext<PanierStateModel>,
     { payload }: SetCurrentProduit
   ) {
-    patchState({ detail: payload });
+    patchState({ current: payload });
   }
 }

@@ -26,9 +26,7 @@ export class PanierComponent implements OnInit {
 
   delProduit(produit: Produit) {
     this.store.dispatch(
-      new DelProduit({
-        produit
-      })
+      new DelProduit(produit)
     );
   }
 

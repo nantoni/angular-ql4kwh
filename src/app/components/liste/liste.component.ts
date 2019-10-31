@@ -7,6 +7,7 @@ import { Store } from "@ngxs/store";
 import { PanierState } from "../../../../shared/states/panier-state";
 import { AddProduit } from "../../../../shared/actions/addProduit-action";
 import { Router } from '@angular/router';
+import { SetCurrentProduit } from '../../../../shared/actions/setCurrentProduit-action'
 
 
 @Component({
@@ -39,12 +40,19 @@ export class ListeComponent implements OnInit {
     );
   }
 
+  setCurrentProduit(produit: Produit) {
+    this.store.dispatch(
+      new SetCurrentProduit(produit)
+    );
+  }
+
   onProduitAddClick(produit: Produit) {
     this.addProduit(produit);
     this.log(produit);
   }
 
-  detail(id : number){
-    this.router.navigate(['detail', id]);
+  detail(produit: Produit){
+    this.setCurrentProduit(produit);
+    this.router.navigate(['detail']);
   }
 }

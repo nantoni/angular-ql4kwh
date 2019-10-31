@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: './components/liste/liste.module#ListeModule'
   },
   {
-    path: 'detail/:id',
+    path: 'detail',
     loadChildren: './components/detail/detail.module#DetailModule'
   },
   {

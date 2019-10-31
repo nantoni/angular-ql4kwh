@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
     <div class="card m-3">
-      <img (click)='log(itemId);' class="p-3 clickable" src="{{itemId.image}}">
-      <div (click)='log(itemId);' class="card-body clickable">{{itemId.nom}}</div>
-        <div (click)='log(itemId);' class="card-footer bg-secondary text-white">{{itemId.taille}}L</div>
-        <div (click)='log(itemId);' class="card-footer bg-warning">{{itemId.prix}}€</div>
-        <div (click)='log(itemId);' class="card-footer">LOREM IPSUM</div>
-        <div (click)='onProduitClick(itemId)' class="card-footer bg-primary clickable">Ajouter au panier</div>
+      <img (click)='log(current);' class="p-3 clickable" src="{{current.image}}">
+      <div (click)='log(current);' class="card-body clickable">{{current.nom}}</div>
+        <div (click)='log(current);' class="card-footer bg-secondary text-white">{{current.taille}}L</div>
+        <div (click)='log(current);' class="card-footer bg-warning">{{current.prix}}€</div>
+        <div (click)='log(current);' class="card-footer">LOREM IPSUM</div>
+        <div (click)='onProduitClick(current)' class="card-footer bg-primary clickable">Ajouter au panier</div>
     </div>
   </div>
 </div>
