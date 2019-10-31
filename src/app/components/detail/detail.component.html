@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+  <div class="mx-auto col-8">
     <div class="card m-3">
-      <img (click)='log(current);' class="p-3 clickable" src="{{current.image}}">
+      <img (click)='log(current);' class="p-3 clickable detailimg" src="{{current.image}}">
       <div (click)='log(current);' class="card-body clickable">{{current.nom}}</div>
         <div (click)='log(current);' class="card-footer bg-secondary text-white">{{current.taille}}L</div>
         <div (click)='log(current);' class="card-footer bg-warning">{{current.prix}}€</div>
