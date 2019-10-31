@@ -1,5 +1,5 @@
  <ul class="list-group">
-   <h3 *ngIf="produits.length < 1">Votre panier est vide.</h3>
+   <h3 class="mx-auto" *ngIf="produits.length < 1">Votre panier est vide.</h3>
   <li (click)="log(item); log(i)" *ngFor="let item of produits; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
     {{item.nom}} - {{item.taille}}L
     <span class="badge-primary badge-pill">{{item.prix}}€</span>
