@@ -6,11 +6,11 @@
 			    		<h3 class="mb-3 mt-3 panel-title">Compte client</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form">
+			    		<form>
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Nom">
+			                <input type="text" name="first_name" class="form-control input-sm" placeholder="Nom" [(ngModel)]="usr.first_name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
@@ -37,7 +37,7 @@
 			    				</div>
 			    			</div>
 			    			
-			    			<input type="submit" value="S'inscrire" class="btn btn-info btn-block">
+			    			<input (click)="submitToBack()" value="S'inscrire" class="btn btn-info btn-block">
 			    		
 			    		</form>
 			    	</div>

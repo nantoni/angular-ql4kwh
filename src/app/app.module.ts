@@ -13,6 +13,7 @@ import { AccueilComponent } from './components/accueil/accueil.component'
 import { Routes, RouterModule } from '@angular/router';
 
 
+
 //const appRoutes: Routes = [
 //{ path: 'detail/:produit', component: DetailComponent },
 //];

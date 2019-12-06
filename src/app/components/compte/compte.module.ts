@@ -4,6 +4,7 @@ import { ProduitPipe } from "../../produit.pipe";
 import { ProduitService } from "../../produit.service";
 import { RouterModule, Routes } from '@angular/router';
 import { CompteComponent } from './compte.component';
+import { FormsModule } from '@angular/forms';
 
 // Commit won't pass
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), FormsModule],
   declarations: [CompteComponent],
   exports: [RouterModule]
 })

@@ -8,6 +8,13 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class CompteComponent implements OnInit {
 
+
+  usr = {};
+
+  submitToBack() {
+    console.log(this.usr);
+  }
+
   constructor() { }
 
   ngOnInit() {
