@@ -11,8 +11,10 @@ import { User } from '../../shared/models/user';
 export class CompteService {
 
   constructor(private http:HttpClient) { }
-    public postCompte (user: User) : Observable<User[]> {
-        return this.http.post<User>(environment.apiUrl + '/api/client', user);
-    }
+
+
+  public postCompte (user: User) : Observable<User[]> {
+      return this.http.post<User>(environment.apiUrl + '/api/client', user);
+  }
 
 }

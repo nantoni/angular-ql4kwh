@@ -3,6 +3,10 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { environment } from '../../../environments/environment';
 
+import { User } from '../../../shared/models/user';
+
+import { CompteService } from '../compte.service';
+
 @Component({
   selector: 'app-compte',
   templateUrl: './compte.component.html',
@@ -11,11 +15,12 @@ import { environment } from '../../../environments/environment';
 export class CompteComponent implements OnInit {
 
 
-  usr = {};
+  usr: User = new User;
+  password_confirmation : String = "";
 
   submitToBack() {
     console.log(this.usr);
-    environment.apiUrl;
+    CompteService.postCompte(this.usr);
   }
 
   constructor() { }
