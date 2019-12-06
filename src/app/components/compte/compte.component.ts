@@ -3,9 +3,9 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { environment } from '../../../environments/environment';
 
-import { User } from '../../../shared/models/user';
+import { User } from '../../../../shared/models/user';
 
-import { CompteService } from '../compte.service';
+import { CompteService } from '../../compte.service';
 
 @Component({
   selector: 'app-compte',
@@ -18,12 +18,13 @@ export class CompteComponent implements OnInit {
   usr: User = new User;
   password_confirmation : String = "";
 
+  constructor(private compteService: CompteService) { }
+
   submitToBack() {
     console.log(this.usr);
-    CompteService.postCompte(this.usr);
+    this.compteService.postCompte(this.usr)
+    .subscribe(res => console.log(res));
   }
-
-  constructor() { }
 
   ngOnInit() {
   }
