@@ -11,6 +11,7 @@ import { PanierState } from "../../shared/states/panier-state";
 import { AppRoutingModule } from './app-routing.module';
 import { AccueilComponent } from './components/accueil/accueil.component'
 import { Routes, RouterModule } from '@angular/router';
+import { CompteService } from './compte.service';
 
 
 
@@ -46,5 +47,6 @@ const appRoutes: Routes = [
     HeaderComponent
   ],
   bootstrap: [AppComponent],
+  providers: [CompteService],
 })
 export class AppModule {}
